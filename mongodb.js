@@ -66,7 +66,7 @@ app.delete('/api/customers/:id', (req, resp)=>{
     })
 })
 app.listen(8080, () => {
-    MongoClient.connect('mongodb://0.0.0.0:27017', { useNewUrlParser: true}, (error, result) =>{
+    MongoClient.connect('mongodb://localhost:2701', { useNewUrlParser: true}, (error, result) =>{
         if(error) throw error
         database = result.db('mydatabase')
         console.log('Connection sucessful!')
